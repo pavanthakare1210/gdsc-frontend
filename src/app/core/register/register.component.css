@@ -1,0 +1,133 @@
+/* ===== Layout ===== */
+.register-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  background: linear-gradient(135deg, #007bff, #6610f2);
+}
+
+/* ===== Card Styling ===== */
+.register-card {
+  background: #fff;
+  width: 100%;
+  max-width: 420px;
+  padding: 30px 25px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.register-card:hover {
+  transform: translateY(-2px);
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 25px;
+}
+
+/* ===== Form Elements ===== */
+.register-form .form-group {
+  margin-bottom: 18px;
+}
+
+.register-form label {
+  display: block;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 6px;
+}
+
+.register-form input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+  transition: border 0.2s ease;
+}
+
+.register-form input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.register-form small {
+  color: #e74c3c;
+  font-size: 13px;
+}
+
+/* ===== Button ===== */
+.register-form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.register-form button:hover:not([disabled]) {
+  background-color: #0056b3;
+}
+
+.register-form button[disabled] {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ===== Responsive Design ===== */
+
+/* Tablets */
+@media (max-width: 768px) {
+  .register-card {
+    padding: 25px 20px;
+    max-width: 90%;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  .register-form input {
+    font-size: 14px;
+  }
+
+  .register-form button {
+    font-size: 15px;
+  }
+}
+
+/* Mobile phones */
+@media (max-width: 480px) {
+  .register-container {
+    padding: 10px;
+  }
+
+  .register-card {
+    padding: 20px 15px;
+    border-radius: 8px;
+    box-shadow: none;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  .register-form input {
+    font-size: 13px;
+    padding: 8px;
+  }
+
+  .register-form button {
+    padding: 10px;
+    font-size: 14px;
+  }
+}

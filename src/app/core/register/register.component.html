@@ -1,1 +1,53 @@
-<p>register works!</p>
+<div class="register-container">
+  <div class="register-card">
+    <h2>Create an Account</h2>
+
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="register-form">
+      <!-- Name -->
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input
+          id="name"
+          type="text"
+          formControlName="name"
+          placeholder="Enter your name"
+        />
+        <small *ngIf="registerForm.get('name')?.touched && registerForm.get('name')?.invalid">
+          Name is required.
+        </small>
+      </div>
+
+      <!-- Email -->
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input
+          id="email"
+          type="email"
+          formControlName="email"
+          placeholder="Enter your email"
+        />
+        <small *ngIf="registerForm.get('email')?.touched && registerForm.get('email')?.invalid">
+          Enter a valid email address.
+        </small>
+      </div>
+
+      <!-- Password -->
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input
+          id="password"
+          type="password"
+          formControlName="password"
+          placeholder="Enter password"
+        />
+        <small *ngIf="registerForm.get('password')?.touched && registerForm.get('password')?.invalid">
+          Password must be at least 6 characters.
+        </small>
+      </div>
+
+      <button type="submit" [disabled]="registerForm.invalid || isSubmitting">
+        {{ isSubmitting ? 'Registering...' : 'Register' }}
+      </button>
+    </form>
+  </div>
+</div>
