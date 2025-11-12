@@ -5,7 +5,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class AuthService {
-  private baseUrl='http://localhost:8080/api/auth';
+  private baseUrl='http://localhost:8080/api/auth/register';
 
   constructor(private http:HttpClient) { }
   forgotPassword(email:string):Observable<any>{
@@ -19,4 +19,7 @@ export class AuthService {
     return this.http.post(`${this.baseUrl}/change-password`, payload);
   }
 
+ register(payload: { username: string; email: string; password: string; firstName:string; lastName:string; phone:"11" }): Observable<any> {
+    return this.http.post(`${this.baseUrl}/register`, payload);
+  }
 }

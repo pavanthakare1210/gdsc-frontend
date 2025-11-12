@@ -10,7 +10,7 @@ import { AuthService } from '../service/auth.service';
 })
 export class ForgotPasswordComponent {
   email = '';
-  message = '';
+  message = ''; 
 
   constructor(private authservice:AuthService) {}
 

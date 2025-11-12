@@ -3,43 +3,55 @@
     <h2>Create an Account</h2>
 
     <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="register-form">
-      <!-- Name -->
+      
       <div class="form-group">
-        <label for="name">Full Name</label>
-        <input
-          id="name"
-          type="text"
-          formControlName="name"
-          placeholder="Enter your name"
-        />
-        <small *ngIf="registerForm.get('name')?.touched && registerForm.get('name')?.invalid">
-          Name is required.
+        <label for="username">Username</label>
+        <input id="username" type="text" formControlName="username" placeholder="Enter your username" />
+        <small *ngIf="registerForm.get('username')?.touched && registerForm.get('username')?.invalid">
+          Username is required.
         </small>
       </div>
 
-      <!-- Email -->
+      
       <div class="form-group">
-        <label for="email">Email Address</label>
-        <input
-          id="email"
-          type="email"
-          formControlName="email"
-          placeholder="Enter your email"
-        />
+        <label for="firstName">First Name</label>
+        <input id="firstName" type="text" formControlName="firstName" placeholder="Enter your first name" />
+        <small *ngIf="registerForm.get('firstName')?.touched && registerForm.get('firstName')?.invalid">
+          First name is required.
+        </small>
+      </div>
+
+      
+      <div class="form-group">
+        <label for="lastName">Last Name</label>
+        <input id="lastName" type="text" formControlName="lastName" placeholder="Enter your last name" />
+        <small *ngIf="registerForm.get('lastName')?.touched && registerForm.get('lastName')?.invalid">
+          Last name is required.
+        </small>
+      </div>
+
+      
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input id="email" type="email" formControlName="email" placeholder="Enter your email" />
         <small *ngIf="registerForm.get('email')?.touched && registerForm.get('email')?.invalid">
-          Enter a valid email address.
+          Please enter a valid email address.
         </small>
       </div>
 
-      <!-- Password -->
+      
+      <div class="form-group">
+        <label for="phone">Phone</label>
+        <input id="phone" type="tel" formControlName="phone" placeholder="+901660951103" />
+        <small *ngIf="registerForm.get('phone')?.touched && registerForm.get('phone')?.invalid">
+          Enter a valid phone number with country code.
+        </small>
+      </div>
+
+
       <div class="form-group">
         <label for="password">Password</label>
-        <input
-          id="password"
-          type="password"
-          formControlName="password"
-          placeholder="Enter password"
-        />
+        <input id="password" type="password" formControlName="password" placeholder="Enter password" />
         <small *ngIf="registerForm.get('password')?.touched && registerForm.get('password')?.invalid">
           Password must be at least 6 characters.
         </small>
@@ -47,7 +59,10 @@
 
       <button type="submit" [disabled]="registerForm.invalid || isSubmitting">
         {{ isSubmitting ? 'Registering...' : 'Register' }}
-      </button>
-    </form>
+      </button><br>
+      <span>Alrady have an account?</span> 
+      <a routerLink="/login">Login</a>
+    </form>  
   </div>
 </div>
+
