@@ -8,7 +8,7 @@ import { AuthService } from '../service/auth.service';
   styleUrls: ['./change-password.component.css']
 })
 export class ChangePasswordComponent {
-  username = 'admin'; 
+  username = ''; 
   oldPassword = '';
   newPassword = '';
   confirmPassword = '';
