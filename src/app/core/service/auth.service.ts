@@ -5,7 +5,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class AuthService {
-  private baseUrl='http://localhost:8080/api/auth/register';
+  private baseUrl='http://localhost:8080/api/auth';
 
   constructor(private http:HttpClient) { }
   forgotPassword(email:string):Observable<any>{

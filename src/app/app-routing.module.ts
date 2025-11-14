@@ -14,10 +14,15 @@ const routes: Routes = [
   { path: 'forgot-password', component: ForgotPasswordComponent },
   { path: 'reset-password/:token', component: ResetPasswordComponent },
   { path: 'change-password', component: ChangePasswordComponent },
-  {path: 'register',component:RegisterComponent},
-  {path: '', redirectTo: 'forgot-password', pathMatch: 'full' },
+  { path: 'register', component: RegisterComponent },
+
+  { path: '', redirectTo: 'forgot-password', pathMatch: 'full' },
+
+  { path: 'admin', loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule) },
+
   { path: '**', redirectTo: 'forgot-password' }
 ];
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
