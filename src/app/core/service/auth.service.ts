@@ -22,4 +22,22 @@ export class AuthService {
  register(payload: { username: string; email: string; password: string; firstName:string; lastName:string; phone:"11" }): Observable<any> {
     return this.http.post(`${this.baseUrl}/register`, payload);
   }
+ login(data: any) {
+  return this.http.post(this.baseUrl + '/login', data);
+}
+
+
+  logout() {
+    localStorage.clear();
+    sessionStorage.clear();
+  }
+
+  isLoggedIn(): boolean {
+    return !!localStorage.getItem('token') || !!sessionStorage.getItem('token');
+  }
+
+  getToken(): string | null {
+    return localStorage.getItem('token') || sessionStorage.getItem('token');
+  }
+
 }

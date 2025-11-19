@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+  import { Component } from '@angular/core';
 import { AuthService } from '../service/auth.service';
 
 
@@ -39,7 +39,7 @@ export class ChangePasswordComponent {
         else if (err.status === 400) this.message = 'Weak password — follow password policy.';
         else if (err.status === 429) this.message = 'Too many attempts — please try later.';
         else this.message = 'Server error. Try again.';
-        this.isLoading = false; 
+        this.isLoading = false;
       }
     });
   }

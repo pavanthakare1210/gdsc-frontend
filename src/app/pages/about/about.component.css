@@ -1,0 +1,28 @@
+.about {
+  font-family: sans-serif;
+  display: flex;
+  justify-content:center;
+  gap: 150px;
+  
+}
+.about h2 {
+  font-size: 50px;
+  margin-bottom: 15px;
+}
+
+.about p {
+  color: rgb(54, 52, 52);
+  max-width: 380px;
+  font-size: 19px;
+}
+
+.about-icon {
+  width: 120px;
+  margin-top: 30px
+  
+}
+
+.about-icon img {
+  height: 100px;
+  width: 120px;
+}

@@ -1,0 +1,28 @@
+<div class="form-container">
+
+  <h2>{{ isEdit ? 'Edit Center' : 'Add Center' }}</h2>
+
+  <label>Name</label>
+  <input type="text" class="input" formControlName="name">
+
+  <label>Code</label>
+  <input type="text" class="input" formControlName="code">
+
+  <label>Email</label>
+  <input type="email" class="input" formControlName="email">
+
+  <label>Phone</label>
+  <input type="text" class="input" formControlName="phone">
+
+  <label>Address</label>
+  <textarea class="input" formControlName="address" rows="3"></textarea>
+
+  <label>Status</label>
+  <input type="checkbox" formControlName="isActive"> Active
+
+  <div class="btn-group">
+    <button class="btn btn-save" (click)="save()">Save</button>
+    <button class="btn btn-cancel" (click)="dialogRef.close()">Cancel</button>
+  </div>
+
+</div>

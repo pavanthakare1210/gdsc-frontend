@@ -43,7 +43,7 @@ export class RegisterComponent {
         },
         error: (err) => {
           alert("User already exists...!");
-            this.router.navigate(['/forgot-password']);
+            this.router.navigate(['/login']);
           this.apiResponse = err.error;
           this.isSubmitting = false;
          

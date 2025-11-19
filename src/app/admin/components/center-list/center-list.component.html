@@ -1,0 +1,47 @@
+<div class="container">
+
+  <div class="header">
+    <h2>Centers</h2>
+    <button class="btn-primary" (click)="openAddDialog()">+ Add Center</button>
+  </div>
+
+  <input
+    type="text"
+    placeholder="Search by name or code..."
+    [(ngModel)]="searchTerm"
+    (input)="applyFilter()"
+    class="search-box"
+  />
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Code</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Status</th>
+        <th width="150px">Actions</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let center of filteredCenters">
+  <td data-label="Name">{{ center.name }}</td>
+  <td data-label="Code">{{ center.code }}</td>
+  <td data-label="Email">{{ center.email }}</td>
+  <td data-label="Phone">{{ center.phone }}</td>
+  <td data-label="Status">
+    <span class="status" [class.active]="center.isActive">
+      {{ center.isActive ? 'Active' : 'Inactive' }}
+    </span>
+  </td>
+  <td data-label="Actions">
+    <button class="btn-edit" (click)="openEditDialog(center)">Edit</button>
+    <button class="btn-del" (click)="deleteCenter(center.id!)">Delete</button>
+  </td>
+</tr>
+
+    </tbody>
+  </table>
+</div>
