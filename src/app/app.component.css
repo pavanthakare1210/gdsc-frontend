@@ -1,11 +1,24 @@
-:root{
-  --bg:#f1f5f6; --card:#fff; --text:#0b2b3a; --muted:#7c8a90;
-  --sidebar-start:#5b14d8; --sidebar-end:#6820f0;
+body.dark-theme {
+  background-color: #121212;
+  color: #fff;
 }
-*{box-sizing:border-box}
-body{margin:0;font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial;background:var(--bg);color:var(--text);}
-.app-root{display:flex;min-height:100vh;}
-.main-area{flex:1;display:flex;flex-direction:column;transition:filter .2s ease;}
-.main-area.overlay{filter:brightness(0.92);}
-.content{padding:24px;min-height:calc(100vh - 72px);}
-body.dark{--bg:#0b1220;--card:#081220;--text:#cfe6ff;--muted:#9fb2c9;}
+
+body.dark-theme .header {
+  background-color: #1e1e1e !important;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+body.dark-theme .header h2 {
+  color: #fff !important;
+}
+
+body.dark-theme .role-selector select {
+  background: #2a2a2a !important;
+  color: #fff !important;
+  border: 1px solid #555 !important;
+}
+
+body.dark-theme .theme-toggle {
+  background: #f5f5f5 !important;
+  color: #121212 !important;
+}

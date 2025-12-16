@@ -1,0 +1,71 @@
+/* Header container */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  background: transparent;
+}
+
+/* Title */
+.header h2 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #000; /* plain CSS color */
+}
+
+/* User controls */
+.user-controls {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Dropdown */
+.role-selector select {
+  padding: 7px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background: #fff;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* Theme button */
+.theme-toggle {
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: none;
+  background: black;
+  color: aliceblue;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.theme-toggle:hover {
+  opacity: 0.85;
+}
+
+/* Mobile / Tablet */
+.header.mobile {
+  margin-top: 15px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(0,0,0,0.1);
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+@media (max-width: 768px) {
+  .user-controls {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+/* Dark theme */
+.dark-theme {
+  background-color: #121212;
+  color: #fff;
+}

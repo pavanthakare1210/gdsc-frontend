@@ -7,9 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StudentDashboardComponent implements OnInit {
 
+  darkMode = false;
+  isSidebarCollapsed = false;
+  role: string = 'students';
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  toggleSidebar() {
+    this.isSidebarCollapsed = !this.isSidebarCollapsed;
   }
 
 }

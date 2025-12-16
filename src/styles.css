@@ -1,6 +1,93 @@
-/* You can add global styles to this file, and also import other style files */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* =========================
+   GLOBAL DARK THEME OVERRIDES
+========================= */
+
+body.dark-theme {
+  background-color: #121212 !important;
+  color: #fff !important;
+}
+
+/* Header in dark mode */
+body.dark-theme .header {
+  background-color: #1e1e1e !important;
+  border-bottom: 1px solid rgba(255,255,255,0.1) !important;
+}
+
+body.dark-theme .header h2 {
+  color: #fff !important;
+}
+
+/* Dropdown in dark mode */
+body.dark-theme .role-selector select {
+  background: #2a2a2a !important;
+  color: #fff !important;
+  border: 1px solid #555 !important;
+}
+
+/* Theme button in dark mode */
+body.dark-theme .theme-toggle {
+  background: #f5f5f5 !important;
+  color: #121212 !important;
+}
+/* ======================================
+   Dashboard Cards — Dark Theme Support
+====================================== */
+
+body.dark-theme .card {
+    background: #1e1e1e !important;
+    color: #ffffff !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    box-shadow: 0 6px 18px rgba(255, 255, 255, 0.05) !important;
+}
+
+/* Card Heading */
+body.dark-theme .card h3 {
+    color: #ffffff !important;
+}
+
+/* Card Paragraph */
+body.dark-theme .card p {
+    color: #cccccc !important;  /* light gray text */
+}
+
+/* Card Value */
+body.dark-theme .card-value {
+    color: #ffffff !important;
+}
+
+/* Icon */
+body.dark-theme .card-icon i {
+    color: #4dabf7 !important; /* glowing blue icon */
+}
+/* =============================
+   Monthly Progress — Dark Theme
+============================= */
+
+body.dark-theme .section h2 {
+    color: #ffffff !important;
+}
+
+body.dark-theme .chart-box {
+    background: #1e1e1e !important;
+    color: #ffffff !important;
+    border: 1px solid rgba(255,255,255,0.1) !important;
+    box-shadow: 0 6px 18px rgba(255,255,255,0.05) !important;
+}
+ /* ===============================
+   User Distribution — Dark Theme
+=============================== */
+
+body.dark-theme .pie-chart {
+    background: #1e1e1e !important;
+    color: #ffffff !important;
+    border: 1px solid rgba(255,255,255,0.1) !important;
+    box-shadow: 0 6px 18px rgba(255,255,255,0.05) !important;
+}
+
+body.dark-theme .legend-item {
+    color: #ffffff !important;
+}
+
+body.dark-theme .muted {
+    color: #cccccc !important;
 }

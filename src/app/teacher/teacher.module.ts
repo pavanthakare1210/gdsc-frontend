@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { TeacherRoutingModule } from './teacher-routing.module';
 import { TeacherDashboardComponent } from './teacher-dashboard/teacher-dashboard.component';
 import { TeacherStudentsComponent } from './teacher-students/teacher-students.component';
+import { SharedModule } from "src/app/shared/shared.module";
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { TeacherStudentsComponent } from './teacher-students/teacher-students.co
   ],
   imports: [
     CommonModule,
-    TeacherRoutingModule
-  ]
+    TeacherRoutingModule,
+    SharedModule
+]
 })
 export class TeacherModule { }

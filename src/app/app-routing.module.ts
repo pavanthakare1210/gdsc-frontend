@@ -2,16 +2,16 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { ChangePasswordComponent } from './core/change-password/change-password.component';
-import { LoginComponent } from './auth/login/login.component';
+import { LoginComponent } from './core/login/login.component';
 
 import { AuthGuard } from './core/guards/auth.guard';
 import { AdminGuard } from './core/guards/admin.guard';
 import { TeacherGuard } from './core/guards/teacher.guard';
 import { StudentGuard } from './core/guards/student.guard';
 
-import { ForgotPasswordComponent } from './auth/forgot-password/forgot-password.component';
-import { ResetPasswordComponent } from './auth/reset-password/reset-password.component';
-import { RegisterComponent } from './auth/register/register.component';
+import { ForgotPasswordComponent } from './core/forget-password/forget-password.component';
+import { ResetPasswordComponent } from './core/reset-password/reset-password.component';
+import { RegisterComponent } from './core/register/register.component';
 
 const routes: Routes = [
   // Public

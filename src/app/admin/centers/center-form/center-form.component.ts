@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-center-form',
+  selector: 'app-center-form-simple',
   templateUrl: './center-form.component.html',
   styleUrls: ['./center-form.component.css']
 })
-export class CenterFormComponent implements OnInit {
+export class CenterFormSimpleComponent implements OnInit {
 
   constructor() { }
 
@@ -13,3 +13,4 @@ export class CenterFormComponent implements OnInit {
   }
 
 }
+

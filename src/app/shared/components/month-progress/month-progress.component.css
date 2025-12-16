@@ -1,0 +1,11 @@
+.section { margin: 20px 0; }
+.section h2 { margin-bottom: 12px; color: var(--dark); }
+.chart-box {
+  background: #fff;
+  padding: 18px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  height: 320px;
+}
+.chart-box canvas { width:100% !important; height:100% !important; }
+@media (max-width: 768px) { .chart-box { height: 260px; } }
