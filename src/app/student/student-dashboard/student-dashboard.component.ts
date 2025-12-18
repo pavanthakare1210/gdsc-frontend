@@ -8,11 +8,11 @@ import { AuthService, Role } from '../../core/services/auth.service';
 })
 export class StudentDashboardComponent implements OnInit {
 
-  role: Role = 'students';          
-  darkMode: boolean = false;        
-  isSidebarCollapsed: boolean = false; 
+  darkMode = false;
+  isSidebarCollapsed = false;
+  role: string = 'students';
 
-  constructor(private auth: AuthService) {}
+  constructor() { }
 
   ngOnInit(): void {
     this.auth.role$.subscribe(role => {
@@ -24,7 +24,8 @@ export class StudentDashboardComponent implements OnInit {
     this.isSidebarCollapsed = !this.isSidebarCollapsed;
   }
 
-  toggleDarkMode() {
-    this.darkMode = !this.darkMode;
+  toggleSidebar() {
+    this.isSidebarCollapsed = !this.isSidebarCollapsed;
   }
+
 }

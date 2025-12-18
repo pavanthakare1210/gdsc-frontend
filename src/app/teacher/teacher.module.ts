@@ -4,7 +4,8 @@ import { FormsModule } from '@angular/forms';
 import { TeacherRoutingModule } from './teacher-routing.module';
 import { TeacherDashboardComponent } from './teacher-dashboard/teacher-dashboard.component';
 import { TeacherStudentsComponent } from './teacher-students/teacher-students.component';
-import { SharedModule } from '../shared/shared.module';
+import { SharedModule } from "src/app/shared/shared.module";
+
 
 @NgModule({
   declarations: [
@@ -13,9 +14,8 @@ import { SharedModule } from '../shared/shared.module';
   ],
   imports: [
     CommonModule,
-    FormsModule,
     TeacherRoutingModule,
-    SharedModule       
-  ]
+    SharedModule
+]
 })
 export class TeacherModule {}
