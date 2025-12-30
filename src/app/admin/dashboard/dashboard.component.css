@@ -1,10 +1,35 @@
-.page { padding: 18px; max-width:1200px; margin:0 auto; }
-.page-header h2 { margin:0 0 16px 0; }
-.grid { display:grid; grid-template-columns: 1fr 380px; gap:18px; align-items:start; }
-.cards { display:grid; grid-template-columns: repeat(4,1fr); gap:12px; }
-.card { background:var(--card); padding:14px; border-radius:10px; box-shadow:0 6px 18px rgba(0,0,0,0.04); }
-.card-title { font-weight:700; color:var(--muted); }
-.card-value { font-size:1.4rem; margin-top:8px; font-weight:800; }
-.right-col .panel { background:var(--card); padding:14px; border-radius:10px; margin-bottom:12px; }
-@media (max-width:1000px){ .grid{grid-template-columns:1fr} .cards{grid-template-columns:repeat(2,1fr)} }
-@media (max-width:600px){ .cards{grid-template-columns:1fr} }
+.dashboard-grid{
+    display:grid;
+    grid-template-columns:1fr 420px;
+    gap:18px;
+    max-width:1200px;
+    margin:0 auto;
+}
+.cards{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:12px;
+}
+.stat-card{background:var(--card);border-radius:12px;padding:14px;display:flex;gap:12px;align-items:center;box-shadow:0 6px 18px rgba(14,32,41,0.04);}
+.stat-card .icon{width:48px;height:48px;border-radius:8px;background:rgba(0,200,150,0.06);display:flex;align-items:center;justify-content:center;}
+.stat-card .info .label{font-weight:700;}
+.stat-card .info .sub{color:var(--muted);font-size:0.85rem;}
+.stat-card .info .value{margin-top:8px;font-weight:800;font-size:1.3rem;}
+.panels{display:flex;flex-direction:column;gap:18px;}
+.card{background:var(--card);border-radius:12px;padding:18px;box-shadow:0 6px 18px rgba(14,32,41,0.04);}
+@media (max-width:1000px)
+{.dashboard-grid{grid-template-columns:1fr;padding:0 12px}.cards{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:600px)
+{.cards{grid-template-columns:1fr}}
+
+.content { margin-left: 250px; padding: 22px; transition: margin .2s; }
+.page-inner { max-width: 1200px; margin: 0 auto; }
+
+/* small screens: top sidebar, no left offset */
+@media (max-width: 768px) {
+  .content { margin-left: 0; margin-top: 10px; padding: 14px; }
+  .two-col { display:flex; flex-direction:column; gap:18px; }
+}
+@media (min-width: 769px) {
+  .two-col { display:grid; grid-template-columns: 1fr 380px; gap:20px; }
+}

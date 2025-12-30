@@ -1,0 +1,15 @@
+.user-distribution { display:flex; gap:20px; align-items:center; }
+.pie-chart { width:320px; height:320px; background:#fff; border-radius:12px; padding:16px; box-shadow:0 6px 18px rgba(0,0,0,0.06); }
+.legend { display:flex; flex-direction:column; gap:12px; }
+.legend-item { display:flex; gap:12px; align-items:center; }
+.sw { width:18px; height:18px; border-radius:4px; display:inline-block; }
+.sw.admin { background:#7209b7 }
+.sw.teacher { background:#ff9e00 }
+.sw.student { background:#06d6a0 }
+.muted { color:#666; font-size:13px; margin-top:4px; }
+
+/* responsive */
+@media (max-width: 768px){
+  .user-distribution { flex-direction:column; align-items:center; }
+  .pie-chart { width:220px; height:220px; }
+}

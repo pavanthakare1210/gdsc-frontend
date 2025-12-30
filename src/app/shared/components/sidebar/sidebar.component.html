@@ -1,0 +1,49 @@
+<div class="sidebar" [class.mobile]="isMobile">
+    
+    <!-- Logo -->
+    <div class="logo">
+        <i class="fas fa-graduation-cap"></i>
+        <h1>EduPortal</h1>
+    </div>
+
+    <!-- Navigation -->
+    <ul class="nav-links" [class.mobile-nav]="isMobile">
+        <li routerLink="/dashboard" routerLinkActive="active">
+            <i class="fas fa-home"></i> Dashboard
+        </li>
+
+        <li routerLink="/users" routerLinkActive="active">
+            <i class="fas fa-user-friends"></i> Users
+        </li>
+
+        <li routerLink="/courses" routerLinkActive="active">
+            <i class="fas fa-book"></i> Courses
+        </li>
+
+        <li routerLink="/schedule" routerLinkActive="active">
+            <i class="fas fa-calendar-alt"></i> Schedule
+        </li>
+
+        <li routerLink="/analytics" routerLinkActive="active">
+            <i class="fas fa-chart-bar"></i> Analytics
+        </li>
+
+        <li routerLink="/settings" routerLinkActive="active">
+            <i class="fas fa-cog"></i> Settings
+        </li>
+
+        <li routerLink="/help" routerLinkActive="active">
+            <i class="fas fa-question-circle"></i> Help
+        </li>
+    </ul>
+
+    <!-- User Info -->
+    <div class="user-info" *ngIf="!isMobile">
+        <div class="user-avatar">JD</div>
+        <div>
+            <h4>John Doe</h4>
+            <p>Administrator</p>
+        </div>
+    </div>
+
+</div>

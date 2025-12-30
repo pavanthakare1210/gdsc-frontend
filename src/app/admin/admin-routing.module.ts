@@ -1,12 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AdminComponent } from './admin.component';
-import { CenterListComponent } from './components/center-list/center-list.component';
+
+import { AdminDashboardComponent } from './dashboard/dashboard.component';
+
 
 const routes: Routes = [
-  { path: '', redirectTo: 'centers', pathMatch: 'full' },
+  { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
 
-  { path: 'centers', component: CenterListComponent }
+  { path: 'dashboard', component: AdminDashboardComponent }
 ];
 
 

@@ -12,7 +12,7 @@ export class CenterListComponent implements OnInit {
 
   centers: Center[] = [];
   filteredCenters: Center[] = [];
-  searchTerm = '';
+  searchTerm:any = '';
 
   constructor(
     private centerService: CenterService,

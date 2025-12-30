@@ -1,0 +1,25 @@
+<!-- Font Awesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+<header class="header" [class.mobile]="isMobile">
+  <!-- Title -->
+  <h2>Dashboard</h2>
+
+  <!-- User controls -->
+  <div class="user-controls">
+    <!-- Role selector -->
+    <!-- <div class="role-selector">
+      <select [(ngModel)]="selectedRole" (change)="changeRole()">
+        <option value="admin">Admin Dashboard</option>
+        <option value="center">Center Dashboard</option>
+        <option value="teacher">Teacher Dashboard</option>
+        <option value="student">Student Dashboard</option>
+      </select>
+    </div> -->
+
+    <!-- Theme toggle button -->
+    <button class="theme-toggle" (click)="toggleTheme()">
+      <i class="fas" [ngClass]="darkTheme ? 'fa-sun' : 'fa-moon'"></i>
+    </button>
+  </div>
+</header>

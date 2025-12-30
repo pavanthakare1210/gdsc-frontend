@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { AuthService } from '../service/auth.service';
+import { AuthService } from '../services/auth.service';
 
 
 @Component({

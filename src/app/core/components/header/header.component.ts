@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+
   @Output() hamburgerClick = new EventEmitter<void>();
 
   roles: Role[] = ['admin', 'center', 'teacher', 'students'];
@@ -22,7 +23,8 @@ export class HeaderComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.auth.roleObservable.subscribe((r: Role) => {
+
+    this.auth.role$.subscribe((r: Role) => {
       this.selected = r;
     });
 
