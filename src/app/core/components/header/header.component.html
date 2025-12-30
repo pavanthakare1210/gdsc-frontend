@@ -1,0 +1,20 @@
+
+
+<header class="header">
+  <div class="left">
+    <button class="hamburger" (click)="hamburgerClick.emit()">☰</button>
+    <h4 class="title">Dashboard</h4>
+  </div>
+
+  <div class="right">
+    <select [(ngModel)]="selected" (change)="onRoleChange()" class="role-select">
+      <option *ngFor="let r of roles" [value]="r">{{ r | titlecase }}</option>
+    </select>
+
+    <button class="theme-toggle" (click)="toggleTheme()" title="Toggle theme">
+      <span *ngIf="!dark">🌞</span><span *ngIf="dark">🌙</span>
+    </button>
+
+    <button class="logout-btn" (click)="logout()">Logout</button>
+  </div>
+</header>

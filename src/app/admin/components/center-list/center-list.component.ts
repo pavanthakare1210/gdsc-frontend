@@ -72,8 +72,11 @@ export class CenterListComponent implements OnInit {
   }
 
   toggleStatus(center: Center) {
-    this.centerService.toggleStatus(center.id, !center.isActive)
-      .subscribe(() => this.loadCenters());
-  }
+    const newStatus = center.status ? "INACTIVE" : "ACTIVE";
 
+    this.centerService.toggleStatus(center.id, newStatus)
+      .subscribe(() => {
+        center.status = !center.status;
+      });
+  }
 }

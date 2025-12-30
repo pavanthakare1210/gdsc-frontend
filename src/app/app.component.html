@@ -1,2 +1,11 @@
-<router-outlet></router-outlet>
+<div class="app-root">
+  <app-sidebar [open]="sidebarOpen" (closeSidebar)="closeSidebar()"></app-sidebar>
 
+  <div class="main-area" [class.overlay]="sidebarOpen">
+    <app-header (hamburgerClick)="toggleSidebar()"></app-header>
+
+    <main class="content">
+      <router-outlet></router-outlet>
+    </main>
+  </div>
+</div>

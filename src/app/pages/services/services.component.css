@@ -1,45 +1,84 @@
 .services {
-  font-family: sans-serif;
+  font-family: "Poppins", sans-serif;
+  background-color: #f8faff;
+  padding: 80px 40px; 
+  text-align: center;
 }
 
 .services h2 {
-  font-size: 50px;
-  margin-left: 150px;
-  margin-bottom: 40px;
+  font-size: 46px;
+  color: #136af5;
+  margin-bottom: 45px;
 }
 
 .cards {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 25px;
+  gap: 35px;
 }
 
 .card {
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
-  height: 200px;
-  width: 250px;
-  padding: 25px;
-  transition: transform 0.3s;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  width: 270px;
+  padding: 30px 25px;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
   transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
 }
 
-.card img {
-  width: 50px;
+.icon-title {
+  display: flex;
+  align-items: center;
+  gap: 15px;
   margin-bottom: 15px;
 }
 
-.card h3 {
-  margin-bottom: 10px;
-  color: #136af5;
+.icon-title img {
+  width: 45px;
+  height: 45px;
 }
-.icon-title{
-  
-  display: flex;
-  gap: 20px;
+
+.card h3 {
+  font-size: 20px;
+  color: #136af5;
+  margin: 0;
+}
+
+.card p {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+  .services {
+    padding: 60px 20px;
+  }
+
+  .services h2 {
+    font-size: 38px;
+    margin-bottom: 40px;
+  }
+
+  .cards {
+    gap: 25px;
+  }
+
+  .card {
+    width: 90%;
+    max-width: 320px;
+    text-align: center;
+  }
+
+  .icon-title {
+    justify-content: center;
+  }
 }

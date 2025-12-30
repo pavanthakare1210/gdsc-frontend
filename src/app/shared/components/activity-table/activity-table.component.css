@@ -1,0 +1,5 @@
+.activity-table{width:100%;border-collapse:collapse;margin-top:12px;}
+.activity-table th{ text-align:left;padding:12px 8px;color:var(--muted);font-weight:700;}
+.activity-table td{padding:14px 8px;border-top:1px solid rgba(0,0,0,0.04);}
+.badge{display:inline-block;padding:6px 10px;border-radius:999px;background:#e6f7ff;color:#0b6b7a;font-weight:700;}
+.badge.pending{background:#ffe6ef;color:#d8366a;}

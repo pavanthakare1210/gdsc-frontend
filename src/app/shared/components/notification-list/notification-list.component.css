@@ -1,0 +1,6 @@
+.notifications{display:flex;flex-direction:column;gap:10px;margin-top:10px;}
+.notification{display:flex;gap:12px;padding:12px 8px;border-top:1px solid rgba(0,0,0,0.03);align-items:flex-start;}
+.icon{width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:18px;}
+.body .title{font-weight:700;}
+.body .message{color:var(--muted);margin-top:4px;}
+.body .time{font-size:12px;color:var(--muted);margin-top:6px;}

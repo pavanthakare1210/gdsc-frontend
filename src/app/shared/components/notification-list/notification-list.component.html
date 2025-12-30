@@ -1,0 +1,6 @@
+<div class="notifications">
+  <div *ngFor="let n of notifications" class="notification">
+    <div class="icon" [style.background]="n.color">{{n.icon}}</div>
+    <div class="body"><div class="title">{{n.title}}</div><div class="message">{{n.message}}</div><div class="time">{{n.time}}</div></div>
+  </div>
+</div>

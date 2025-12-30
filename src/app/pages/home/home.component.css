@@ -1,34 +1,65 @@
 .main {
-  font-family: sans-serif;
+  font-family: "Poppins", sans-serif;
   background-color: #136af5;
-  color: white;
-  padding: 100px 20px;
-}
-
-.main h1 {
-  font-size: 60px;
-  margin-bottom: 20px;
+  color: #ffffff;
+  padding: 100px 20px 60px; 
   text-align: center;
 }
 
-.main p {
-  font-size: 20px;
-  max-width: 470px;
+.main-content {
+  max-width: 700px;
   margin: 0 auto;
 }
 
+.main h1 {
+  font-size: 58px;
+  font-weight: 700;
+  margin-bottom: 18px;
+  letter-spacing: 1px;
+}
+
+.main p {
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 500px;
+  margin: 0 auto;
+  opacity: 0.9;
+}
+
 .btn-main {
-  display: block;
-  margin: 20px 370px 0;
-  background-color: white;
-  color: #327ffb;
+  margin-top: 30px;
+  background-color: #ffffff;
+  color: #136af5;
   border: none;
-  padding: 12px 28px;
+  padding: 12px 32px;
   border-radius: 6px;
   font-weight: 600;
+  font-size: 16px;
   cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 .btn-main:hover {
-  background-color: whitesmoke;
+  background-color: #f3f6ff;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .main {
+    padding: 70px 15px 50px;
+  }
+
+  .main h1 {
+    font-size: 40px;
+  }
+
+  .main p {
+    font-size: 16px;
+  }
+
+  .btn-main {
+    padding: 10px 26px;
+    font-size: 15px;
+  }
 }

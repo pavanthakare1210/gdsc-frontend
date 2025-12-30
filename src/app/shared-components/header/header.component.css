@@ -1,0 +1,122 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 50px;
+  background-color: #ffffff;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo {
+  width: 52px;
+  height: auto;
+}
+
+.site-name {
+  font-size: 26px;
+  font-weight: 700;
+  color: #333;
+}
+
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.nav-links a {
+  position: relative;
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 3px; 
+  left: 0;
+  bottom: -4px;
+  background: #2563eb;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.nav-links a:hover {
+  color: #2563eb;
+}
+
+
+.nav-links a.active {
+  color: #333; 
+}
+
+.nav-links a.active:hover {
+  color: #2563eb; 
+}
+
+.nav-links a.active::after {
+  width: 0%; 
+}
+
+.nav-links a.active:hover::after {
+  width: 100%; 
+}
+
+
+section {
+  padding: 70px 50px;
+}
+
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px 30px;
+  }
+
+  .logo {
+    width: 45px;
+  }
+
+  .site-name {
+    font-size: 24px;
+  }
+
+  .nav-links {
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 12px 18px;
+    justify-content: flex-start;
+  }
+
+  .nav-links a {
+    font-size: 17px;
+  }
+
+  section {
+    padding: 60px 30px;
+  }
+}

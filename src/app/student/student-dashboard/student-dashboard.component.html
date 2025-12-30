@@ -1,0 +1,54 @@
+<div class="dashboard-container" [class.dark]="darkMode">
+
+  <!-- Header -->
+  <app-header (hamburgerClick)="toggleSidebar()"></app-header>
+
+  <div class="main-layout">
+
+    <!-- Sidebar -->
+    <aside class="sidebar" [class.collapsed]="isSidebarCollapsed">
+      <ul>
+
+        <!-- COMMON MENU -->
+        <li routerLink="home" routerLinkActive="active">Home</li>
+        <li routerLink="profile" routerLinkActive="active">My Profile</li>
+
+        <!-- ADMIN MENU -->
+        <ng-container *ngIf="role === 'admin'">
+          <li routerLink="centers" routerLinkActive="active">Centers</li>
+          <li routerLink="teachers" routerLinkActive="active">Teachers</li>
+          <li routerLink="students" routerLinkActive="active">Students</li>
+          <li routerLink="activity" routerLinkActive="active">Activity Logs</li>
+        </ng-container>
+
+        <!-- CENTER MENU -->
+        <ng-container *ngIf="role === 'center'">
+          <li routerLink="teachers" routerLinkActive="active">Manage Teachers</li>
+          <li routerLink="students" routerLinkActive="active">Manage Students</li>
+          <li routerLink="reports" routerLinkActive="active">Reports</li>
+        </ng-container>
+
+        <!-- TEACHER MENU -->
+        <ng-container *ngIf="role === 'teacher'">
+          <li routerLink="my-students" routerLinkActive="active">My Students</li>
+          <li routerLink="attendance" routerLinkActive="active">Attendance</li>
+          <li routerLink="assignments" routerLinkActive="active">Assignments</li>
+        </ng-container>
+
+        <!-- STUDENT MENU -->
+        <ng-container *ngIf="role === 'students'">
+          <li routerLink="courses" routerLinkActive="active">My Courses</li>
+          <li routerLink="results" routerLinkActive="active">Results</li>
+          <li routerLink="notifications" routerLinkActive="active">Notifications</li>
+        </ng-container>
+
+      </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="content">
+      <router-outlet></router-outlet>
+    </main>
+
+  </div>
+</div>

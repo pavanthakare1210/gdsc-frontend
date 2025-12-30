@@ -1,0 +1,26 @@
+<div class="page">
+  <div class="page-header">
+    <h2>Admin Dashboard</h2>
+  </div>
+
+  <div class="grid">
+    <div class="cards">
+      <div class="card" *ngFor="let s of stats">
+        <div class="card-title">{{ s.title }}</div>
+        <div class="card-value">{{ s.value }}</div>
+      </div>
+    </div>
+
+    <div class="right-col">
+      <div class="panel">
+        <h3>Recent Activity</h3>
+        <app-activity-table [activities]="recentActivities"></app-activity-table>
+      </div>
+
+      <div class="panel">
+        <h3>Notifications</h3>
+        <app-notification-list [notifications]="notifications"></app-notification-list>
+      </div>
+    </div>
+  </div>
+</div>

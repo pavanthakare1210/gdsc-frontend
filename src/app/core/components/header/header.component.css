@@ -1,0 +1,8 @@
+.header{height:72px;display:flex;align-items:center;justify-content:space-between;padding:0 18px;background:var(--card);border-bottom:1px solid rgba(0,0,0,0.04);box-shadow:0 3px 8px rgba(14,32,41,0.02);}
+.left{display:flex;align-items:center;gap:12px;}
+.hamburger{display:none;background:transparent;border:none;font-size:20px;}
+.title{margin:0;font-size:1.1rem;font-weight:700;}
+.right{display:flex;align-items:center;gap:10px;}
+.role-select{padding:6px 8px;border-radius:6px;border:1px solid #e6e9eb;}
+.theme-toggle,.logout-btn{padding:6px 10px;border-radius:6px;border:1px solid #e6e9eb;background:transparent;cursor:pointer;}
+@media (max-width:991px){.hamburger{display:inline-block}}

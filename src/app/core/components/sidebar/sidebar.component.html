@@ -1,0 +1,15 @@
+<aside class="sidebar" [class.open]="open">
+  <div class="top">
+    <div class="brand"><div class="logo">🎓</div><div class="name">EduPortal</div></div>
+    <button class="close-btn" (click)="onClose()">✕</button>
+  </div>
+
+  <nav class="nav">
+    <a *ngFor="let n of nav" [routerLink]="n.path" class="nav-link">{{n.label}}</a>
+  </nav>
+
+  <div class="profile">
+    <div class="avatar">JD</div>
+    <div class="meta"><div class="nm">John Doe</div><div class="role">Admin</div></div>
+  </div>
+</aside>

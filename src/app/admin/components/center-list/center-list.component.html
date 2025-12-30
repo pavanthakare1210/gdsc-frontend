@@ -32,9 +32,9 @@
   <td data-label="Email">{{ center.email }}</td>
   <td data-label="Phone">{{ center.phone }}</td>
   <td data-label="Status">
-    <span class="status" [class.active]="center.isActive">
-      {{ center.isActive ? 'Active' : 'Inactive' }}
-    </span>
+      <span class="status" [class.active]="center.status">
+            {{ center.status ? 'Active' : 'Inactive' }}
+          </span>
   </td>
   <td data-label="Actions">
     <button class="btn-edit" (click)="openEditDialog(center)">Edit</button>
